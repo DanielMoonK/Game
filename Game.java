@@ -28,7 +28,7 @@ public class Game
     }
 
     public void play(){
-        totalScore = this.getScore();
+        this.totalScore = this.getScore();
     }
 
     public int getScore(){
@@ -52,8 +52,52 @@ public class Game
                 highScore = totalScore;
             }
 
-            int
-            this.changeGame()
+            double randomBonus = Math.random()*2;
+            boolean setBonus = false;
+            if(randomBonus<1) setBonus = false;
+            else setBonus = true;
+
+            double randomL1f = Math.random()*2;
+            boolean setL1f = false;
+            if(randomL1f<1) setL1f = false;
+            else setL1f = true;
+
+            double randomL2f = Math.random()*2;
+            boolean setL2f = false;
+            if(randomL2f<1) setL2f = false;
+            else setL2f = true;
+
+            double randomL3f = Math.random()*2;
+            boolean setL3f = false;
+            if(randomL3f<1) setL3f = false;
+            else setBonus = true;
+
+            int setL1s = (int)(Math.random()*100);
+            int setL2s = (int)(Math.random()*100);
+            int setL3s = (int)(Math.random()*100);
+
+            this.changeGame(setBonus, setL1f, setL2f, setL3f, setL1s, setL2s, setL3s);
+            System.out.print("Game ");
+            System.out.print(i + 1);
+            System.out.println(": ");
+            System.out.print("Bonus: ");
+            System.out.println(setBonus);
+            System.out.print("Level 1 finished: ");
+            System.out.println(setL1f);
+            System.out.print(" with score: ");
+            System.out.println(setL1s);
+            System.out.print("Level 2 finished: ");
+            System.out.println(setL2f);
+            System.out.print(" with score: ");
+            System.out.println(setL2s);
+            System.out.print("Level 3 finished: ");
+            System.out.println(setL3f);
+            System.out.print(" with score: ");
+            System.out.println(setL3s);
+            System.out.print("Total Score: ");
+            System.out.println(this.getScore());
+
         }
+        return highScore;
     }
 }

@@ -15,6 +15,7 @@ public class Main{
 
         System.out.println("----------------------------------------");
 
-        
+        Game randomGame = new Game(false, true, true, true, 10, 10, 10);
+        System.out.println(randomGame.playManyTimes(2));
     }
 }
